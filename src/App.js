@@ -1,12 +1,17 @@
-import logo from './logo.svg';
+
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
-import NavbarSection from './components/navbar';
 import NavigationsStack from './navigationStack/Allnavigations';
+//import { AuthContextProvider } from './context/authContext';
 
 function App() {
   return (
-    <div className="App">
-    <NavigationsStack/>
+    <div>
+      
+          <BrowserRouter>
+             <NavigationsStack/>
+          </BrowserRouter>
+     
     </div>
   );
 }

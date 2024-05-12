@@ -1,8 +1,14 @@
-const SingupScreen=()=>{
+import NavbarSection from "../components/navbar"
+import SignUpSection from "../components/signup"
+
+
+
+const SignUpScreen=()=>{
     return(
         <>
-        <h1 className="text-white">singup page</h1>
+        <NavbarSection/>
+        <SignUpSection/>
         </>
     )
 }
-export default SingupScreen
+export default SignUpScreen
