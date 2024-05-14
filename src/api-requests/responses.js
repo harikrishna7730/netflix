@@ -10,6 +10,6 @@ const request={
 export default request
 
 
-// "https://api.themoviedb.org/3/movie/popular?api_key=1b7cf18b6164af94373d3e9878440394&language=en-US&page=1"
- // popular:"https://api.themoviedb.org/3/search/movie?query=Jack+Reacher&api_key=1b7cf18b6164af94373d3e9878440394"
- //netflix image src="https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.svg"
+//"https://api.themoviedb.org/3/movie/popular?api_key=1b7cf18b6164af94373d3e9878440394&language=en-US&page=1"
+//popular:"https://api.themoviedb.org/3/search/movie?query=Jack+Reacher&api_key=1b7cf18b6164af94373d3e9878440394"
+//netflix image src="https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.svg"

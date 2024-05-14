@@ -8,6 +8,8 @@ import HomeScreen from "../pages/homeScreen"
 import SignUpScreen from "../pages/singupScreen"
 import { AuthContextProvider } from "../context/authContext"
 import SignInScreen from "../pages/signinScreen"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -29,6 +31,7 @@ const NavigationsStack=()=>{
     return(
         <>
         <AuthContextProvider>
+        <ToastContainer theme="dark" />
             <Routes>
             <Route path="/" Component={HomeScreen}/>
             <Route path="/signup" Component={SignUpScreen}/>

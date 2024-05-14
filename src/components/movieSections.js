@@ -2,6 +2,7 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import {FaHeart ,FaRegHeart} from "react-icons/fa"
+import { GiTransparentSlime } from "react-icons/gi"
 
 
 
@@ -24,7 +25,7 @@ const Sections=({title,fetchUrl})=>{
     <>
         <h1 className="text-white font-bold md:text-xl p-4 bg-black">{title}</h1>
         <div className="relative flex items-center bg-black">
-           <div id={"slider"} className="w-full h-[200px] overflow-x-scroll whitespace-nowrap scroll-smooth relative">
+           <div id={"slider"} className="w-full h-[200px] overflow-auto scrollbar-hide whitespace-nowrap scroll-smooth relative no-scrollbar">
                 {
                     movies.map((item,id)=>{
                         return(

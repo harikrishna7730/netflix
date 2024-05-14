@@ -1,6 +1,7 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-// import request from "../api-requests/responses"
+
+
 
 const MainScreen=()=>{
 
@@ -32,7 +33,7 @@ useEffect(()=>{
             <img className="w-full h-full obsolute top-0 left-o"   src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`} alt={movie?.title}/>
             <div className="absolute w-full top-[30%]">
             <h1 className="text-4xl font-bold ml-2">{movie?.title}</h1>
-              <button className="text-xl bg-white rounded-sm cursor-pointer text-black px-4 py-2 m-3 border-black hover:bg-slate-400  hover:border-solid hover:border-black"><img src="" alt="/"/>Play</button>
+              <button className="text-xl bg-white rounded-sm cursor-pointer text-black px-4 py-2 m-3 border-black hover:bg-slate-400  hover:border-solid hover:border-black font-bold"><img src="/play.png" alt="/" width={20} className="inline mr-2 mt-[-4px]"/>Play</button>
               <button className="border-solid border-2 border-white px-2 py-2  mb-1.1">Watch Later</button>
               <h2 className="text-gray-300 text-sm mx-2 my-1">ReleaseDate:{movie?.release_date}</h2>
               <p className="ml-2 md:max-w-[70%] lg:max-w-[50%] xl:max-w-[35%]">{movie?.overview}</p>
