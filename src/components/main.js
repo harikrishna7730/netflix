@@ -36,7 +36,7 @@ useEffect(()=>{
               <button className="text-xl bg-white rounded-sm cursor-pointer text-black px-4 py-2 m-3 border-black hover:bg-slate-400  hover:border-solid hover:border-black font-bold"><img src="/play.png" alt="/" width={20} className="inline mr-2 mt-[-4px]"/>Play</button>
               <button className="border-solid border-2 border-white px-2 py-2  mb-1.1">Watch Later</button>
               <h2 className="text-gray-300 text-sm mx-2 my-1">ReleaseDate:{movie?.release_date}</h2>
-              <p className="ml-2 md:max-w-[70%] lg:max-w-[50%] xl:max-w-[35%]">{movie?.overview}</p>
+              <p className="ml-2 md:max-w-[70%] lg:max-w-[50%] xl:max-w-[35%]">{movie?.overview.slice(0,200)}</p>
             </div>
           </div>
         </div>
@@ -45,40 +45,3 @@ useEffect(()=>{
 }
 export default MainScreen
 
-
-// import axios from "axios";
-// import { useEffect, useState } from "react";
-
-// const MainScreen = () => {
-//   const [movies, setMovies] = useState([]);
-
-//   useEffect(() => {
-//     const fetchMovies = async () => {
-//       try {
-//         const response = await axios.get(
-//           "https://api.themoviedb.org/3/movie/popular?api_key=1b7cf18b6164af94373d3e9878440394&language=en-US&page=1"
-//         );
-//         setMovies(response.data.results);
-//         console.log(response.data.results)
-//       } catch (error) {
-//         console.error(error);
-//       }
-//     };
-//     fetchMovies();
-//   }, []);
-
-//   return (
-//     <>
-//       {movies.map((movie) => (
-//         <div key={movie.id}>
-//           <h2>{movie.title}</h2>
-//           <p>{movie.overview}</p>
-//           <p>Release Date: {movie.release_date}</p>
-//           <p>Popularity: {movie.popularity}</p>
-//         </div>
-//       ))}
-//     </>
-//   );
-// };
-
-// export default MainScreen;

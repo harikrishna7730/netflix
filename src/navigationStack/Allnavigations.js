@@ -11,23 +11,11 @@ import SignInScreen from "../pages/signinScreen"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Player from "../pages/player"
+import SavedScreen from "../pages/savedScreen"
 
 
 
 const NavigationsStack=()=>{
-
-    // const navigate=useNavigate()
-    // useEffect(()=>{
-    //  onAuthStateChanged(auth, async(user)=>{
-    //         if(user){
-    //             console.log("Logged In")
-    //             navigate("/");
-    //         }else{
-    //             console.log("Logged out")
-    //             navigate("/login");
-    //         }
-    //     })
-    // },[])
 
     return(
         <>
@@ -38,6 +26,7 @@ const NavigationsStack=()=>{
             <Route path="/signup" Component={SignUpScreen}/>
             <Route path="/signin" Component={SignInScreen}/>
             <Route path="/player/:id" Component={Player}/>
+            <Route path="/account" Component={SavedScreen}/>
             </Routes>
         </AuthContextProvider>
            
