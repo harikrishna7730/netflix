@@ -5,7 +5,8 @@ const request={
     TopRated:`https://api.themoviedb.org/3/movie/top_rated?api_key=${key}&language=en-US&page=1`,
     Trending:`https://api.themoviedb.org/3/movie/popular?api_key=${key}&language=en-US&page=2`,
     Horror:`https://api.themoviedb.org/3/search/movie?api_key=${key}&language=en-US&query=horror&page=1`,
-    Upcoming:`https://api.themoviedb.org/3/movie/upcoming?api_key=${key}&language=en-US&page=1`
+    Upcoming:`https://api.themoviedb.org/3/movie/upcoming?api_key=${key}&language=en-US&page=1`,
+    searching:`https://api.themoviedb.org/3/discover/movie?api_key=${key}`
 };
 export default request
 
