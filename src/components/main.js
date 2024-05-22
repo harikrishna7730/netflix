@@ -27,7 +27,7 @@ const MainScreen = () => {
         "https://api.themoviedb.org/3/movie/popular?api_key=1b7cf18b6164af94373d3e9878440394&language=en-US&page=1"
       );
       setMovies(result.data.results);
-      console.log(result.data.results);
+      //console.log(result.data.results);
     } catch (err) {
       console.error(err);
     }
