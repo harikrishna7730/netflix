@@ -7,6 +7,8 @@ import { Link } from "react-router-dom"
 import { UserAuth } from "../context/authContext"
 import { db } from "./firebase"
 import { arrayUnion,doc,updateDoc } from "firebase/firestore"
+import Aos from "aos"
+import "aos/dist/aos.css"
 
 
 const Sections=({title,fetchUrl,item})=>{
@@ -43,6 +45,10 @@ const Sections=({title,fetchUrl,item})=>{
             alert("Please login to save a movies")
         }
     }
+
+    useEffect(()=>{
+     Aos.init({duration:2000})
+    },[])
     
     return(
     <>
@@ -52,7 +58,7 @@ const Sections=({title,fetchUrl,item})=>{
                 {
                     movies.map((item,id)=>{
                         return(
-                            <Link to={`/player/${item.id}`} className="w-[160px] h=[160px] sm:w-[200px] md:w-[240px] lg:w-[280px]  inline-block cursor-pointer relative p-2 ml-4" key={id} >
+                            <Link to={`/player/${item.id}`} data-aos="fade-left" data-aos-duration="500" className="w-[160px] h=[160px] sm:w-[200px] md:w-[240px] lg:w-[280px]  inline-block cursor-pointer relative p-2 ml-4" key={id} >
                             <img className="w-full h-auto block " src={`https://image.tmdb.org/t/p/w500/${item?.backdrop_path}`} alt={item?.title}  />
                             <div className="absolute top-0 left-0 w-full h-full hover:bg-black/45 opacity-0 text-white hover:opacity-100">
                                <p className="white-space-normal text-xs md:text-sm font-bold flex justify-center items-center h-full text-center">

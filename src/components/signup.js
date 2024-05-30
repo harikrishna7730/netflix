@@ -8,6 +8,7 @@ const SignUpSection = () => {
 
   const{user,signUp}=UserAuth();
   console.log(user)
+  
 
 
   const[name,setName]= useState("")
