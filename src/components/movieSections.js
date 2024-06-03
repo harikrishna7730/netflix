@@ -2,7 +2,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import {FaHeart ,FaRegHeart} from "react-icons/fa"
-import { GiTransparentSlime } from "react-icons/gi"
 import { Link } from "react-router-dom"
 import { UserAuth } from "../context/authContext"
 import { db } from "./firebase"
@@ -30,15 +29,17 @@ const Sections=({title,fetchUrl,item})=>{
 
     const movieID= doc(db,"users", `${user?.email}`)
 
-    const saveShow=async()=>{
+
+    const saveShow=async(item,event)=>{ 
+        event.stopPropagation(); 
         if(user?.email){
             setLike(!like)
             setSaved(true)
             await updateDoc(movieID,{
                 savedShows:arrayUnion({
-                    id: item.id,
+                    id:item.id,
                     title: item.title,
-                    img: item.backdrop_path
+                    img: item.backdrop_path,
                 })
             })
         }else{
@@ -62,12 +63,19 @@ const Sections=({title,fetchUrl,item})=>{
                             <img className="w-full h-auto block " src={`https://image.tmdb.org/t/p/w500/${item?.backdrop_path}`} alt={item?.title}  />
                             <div className="absolute top-0 left-0 w-full h-full hover:bg-black/45 opacity-0 text-white hover:opacity-100">
                                <p className="white-space-normal text-xs md:text-sm font-bold flex justify-center items-center h-full text-center">
-                                {item?.title}
+                                {item?.title.slice(0,20)}
                                </p>
-                               <p onClick={saveShow}> 
-                                {like ? <FaHeart  className="absolute top-4 left-4 text-gray-300 "/> : <FaRegHeart className="absolute top-4 left-4 text-gray-300 " />  }
+                               {/* <p className="white-space-normal text-xs md:text-xs flex justify-center items-center h-full text-center">
+                                {item.overview}
+                               </p> */}
+                               <p onClick={(event) => saveShow(item,event)}> 
+                                {like ? (
+                                <FaHeart  className="absolute top-4 left-4 text-gray-300 "/>
+                                ) : (
+                                 <FaRegHeart className="absolute top-4 left-4 text-gray-300 " /> ) }
                                 </p>
-                            </div>
+                                {/* {saved && <p className="absolute bottom-4 left-4 text-green-500">Saved!</p>} */}
+                                </div>
                             </Link>
                         )
                     })

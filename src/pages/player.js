@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 const Player=()=>{
     const{id}=useParams();
@@ -32,7 +32,7 @@ const Player=()=>{
     return(
         <>
          <div className="h-full w-full flex flex-col justify-center bg-black ">
-            <img src="/left-arrow.png" className="absolute top-4 left-8 w-[50px] cursor-pointer z-10 hover:bg-red-700 hover:rounded-full" alt="back" height={100} width={100} onClick={()=>navigate(-2)}/>
+            <Link to={"/"}><img src="/left-arrow.png" className="absolute top-4 left-8 w-[50px] cursor-pointer z-10 hover:bg-red-700 hover:rounded-full" alt="back" height={100} width={100} /></Link>
             <iframe width="98%" height="90%"
              src={`https://www.youtube.com/embed/${player.key}`}
              title="Trailer"

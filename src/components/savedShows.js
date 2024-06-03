@@ -16,8 +16,8 @@ const SavedShows=({item})=>{
 
     return( 
         <>
-        <div>
-        <h1 className="text-white font-bold md:text-xl p-4 bg-black">My Shows</h1>
+        <div className="absolute top-[200px]">
+        <h1 className="text-white font-bold text-6xl pb-5 pl-4 bg-black underline underline-offset-8">My shows</h1>
         <div className="relative flex items-center bg-black">
            <div className="w-full h-[200px] overflow-auto scrollbar-hide whitespace-nowrap scroll-smooth relative no-scrollbar">
                 {
