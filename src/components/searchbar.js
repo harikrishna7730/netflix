@@ -1,14 +1,4 @@
 
-// const SearchBar=()=>{
-    
-//     return(
-//         <>
-//         <h1 className="text-white">Search bar page</h1>
-
-//         </>
-//     )
-// }
-// export default SearchBar
 
 import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
