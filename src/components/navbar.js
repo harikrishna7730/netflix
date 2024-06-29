@@ -59,7 +59,7 @@ const NavbarSection = () => {
               type="search"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className=" bg-transparent rounded-full "
+              className=" bg-transparent rounded-full text-white"
               name="search"
               id="search"
               placeholder="Search"

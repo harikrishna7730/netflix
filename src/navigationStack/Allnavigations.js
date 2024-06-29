@@ -13,6 +13,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import Player from "../pages/player"
 import SavedScreen from "../pages/savedScreen"
 import SearchScreen from "../pages/searchScreen"
+import MovieTrailer from "../components/movieTrailer"
+import SearchBar from "../components/searchbar"
 
 
 
@@ -29,6 +31,8 @@ const NavigationsStack=()=>{
             <Route path="/player/:id" Component={Player}/>
             <Route path="/account" Component={SavedScreen}/>
             <Route path="/search" Component={SearchScreen}/>
+            <Route path="/search" element={SearchBar} />
+            <Route path="/movie/:id" element={MovieTrailer} />
             </Routes>
         </AuthContextProvider>
            
