@@ -1,8 +1,9 @@
 
 import { UserAuth } from "../context/authContext"
 import { db } from "./firebase"
-import { doc,onSnapshot } from "firebase/firestore"
+import { doc,onSnapshot} from "firebase/firestore"
 import { useEffect, useState } from "react"
+
 
 const SavedShows=({item})=>{
     const[movies,setMovies]=useState([])
@@ -16,10 +17,10 @@ const SavedShows=({item})=>{
 
     return( 
         <>
-        <div className="absolute top-[200px]">
+        <div className="w-full text-white absolute top-[200px]">
         <h1 className="text-white font-bold text-6xl pb-5 pl-4 bg-black underline underline-offset-8">My shows</h1>
         <div className="relative flex items-center bg-black">
-           <div className="w-full h-[200px] overflow-auto scrollbar-hide whitespace-nowrap scroll-smooth relative no-scrollbar">
+           <div className="w-full h-[200px] overflow-x-scroll whitespace-nowrap   relative ">
                 {
                     movies.map((item,id)=>{
                         return(

@@ -9,14 +9,13 @@ const MainScreen = () => {
   useEffect(() => {
     FetchingApi();
   }, []);
-
+// Change the movie every 2 seconds
   useEffect(() => {
     if (movies.length > 0) {
       const intervalId = setInterval(() => {
         setCurrentMovieIndex((prevIndex) => (prevIndex + 1) % movies.length);
-      }, 3000); // Change the movie every 2 seconds
-
-      // Clean up the interval on component unmount
+      }, 3000); 
+      
       return () => clearInterval(intervalId);
     }
   }, [movies]);

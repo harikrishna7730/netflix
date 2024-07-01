@@ -230,7 +230,7 @@ const Sections = ({ title, fetchUrl }) => {
   const [saved, setSaved] = useState(false);
   const { user } = UserAuth();
   const [movies, setMovies] = useState([]);
-  const [like, setLike] = useState({});
+  const [like, setLike] = useState({});//false
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -244,6 +244,8 @@ const Sections = ({ title, fetchUrl }) => {
       });
   }, [fetchUrl]);
 
+  
+
   const saveShow = async (item, event) => {
     event.stopPropagation();
     if (user?.email) {
@@ -253,8 +255,9 @@ const Sections = ({ title, fetchUrl }) => {
       }));
       setSaved(true);
       try {
-        const userRef = doc(db, "users", user.email);
-        await updateDoc(userRef, {
+        // const userRef = doc(db, "users", user.email);
+        const movieID=doc(db,"users",`${user?.email}`)
+        await updateDoc(movieID, {
           savedShows: arrayUnion({
             id: item.id,
             title: item.title,
