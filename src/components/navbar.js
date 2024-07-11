@@ -44,15 +44,15 @@ const NavbarSection = () => {
   return (
     <>
       <div className="flex items-center justify-between p-4 flex-row w-full cursor-pointer absolute z-[100]">
-      <Link to={"/"}>
-        <img
-          src="https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.svg"
-          className="z-10 ml-4 mt-2 md:w-[100px] md:text-center"
-          alt="TMDB"
-          width={140}
-          height={130}
-        />
-      </Link>
+        <Link to={"/"}>
+          <img
+            src="https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.svg"
+            className="z-10 ml-4 mt-2 md:w-[100px] md:text-center"
+            alt="TMDB"
+            width={140}
+            height={130}
+          />
+        </Link>
         <div className="relative left-[300px]">
           <form onSubmit={handleSearch} className="flex items-center">
             <input
@@ -66,11 +66,11 @@ const NavbarSection = () => {
               aria-label="Search movies"
             />
             <button type="submit" aria-label="Search" className="absolute inset-y-0 right-0 my-auto px-3.5">
-            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="white" className="w-30 h-12 absolute  cursor-pointer inset-y-0 my-auto px-3.5 border-r border-r-transparent peer-focus:border-white stroke-gray-500   peer-focus:stroke-white">                 
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" className="w-30 h-12 absolute  cursor-pointer inset-y-0 my-auto px-3.5 border-r border-r-transparent peer-focus:border-white stroke-gray-500   peer-focus:stroke-white">
                 <path d="M8.25 10.875a2.625 2.625 0 1 1 5.25 0 2.625 2.625 0 0 1-5.25 0Z" />
                 <path fillRule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.125 4.5a4.125 4.125 0 1 0 2.338 7.524l2.007 2.006a.75.75 0 1 0 1.06-1.06l-2.006-2.007a4.125 4.125 0 0 0-3.399-6.463Z" clipRule="evenodd" />
-            </svg>
-           </button>
+              </svg>
+            </button>
           </form>
 
         </div>
